@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Rahul's personal portfolio. Explore my skills, projects, and ways to connect.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Rahul | Personal Portfolio</title>
+  <style>
+    :root{--bg:#080d1a;--panel:#10182b;--text:#f5f7ff;--muted:#aab5cc;--blue:#73a7ff;--cyan:#62e6e0;--line:rgba(255,255,255,.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 80% 0%,#172b51 0,transparent 36%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,13,26,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:20px}
+    .brand{font-size:1.35rem;font-weight:850;letter-spacing:.08em}.brand span{color:var(--cyan)}
+    .navlinks{display:flex;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--cyan)}
+    .hero{min-height:76vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:46px;padding:76px 0 64px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid var(--line);border-radius:99px;color:var(--cyan);font-size:.85rem;background:rgba(255,255,255,.03)}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+    h1{font-size:clamp(3.3rem,8vw,6.2rem);line-height:.98;letter-spacing:-.065em;margin:24px 0}
+    h1 span{background:linear-gradient(100deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .intro{max-width:620px;color:var(--muted);font-size:1.1rem}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;font-weight:750;border:1px solid var(--line);transition:transform .2s,opacity .2s}
+    .btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(100deg,var(--blue),var(--cyan));color:#06101e;border:0}.secondary{background:rgba(255,255,255,.04)}
+    .profile-card{position:relative;border:1px solid var(--line);background:linear-gradient(145deg,rgba(115,167,255,.13),rgba(98,230,224,.04));border-radius:28px;padding:26px;min-height:340px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .orb{width:min(250px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:5.5rem;font-weight:900;letter-spacing:-.08em;color:#eafaff;background:radial-gradient(circle at 30% 25%,#5e83b9,#182849 52%,#0b1224 74%);box-shadow:inset -18px -20px 45px #050a14,0 0 65px rgba(98,230,224,.18);border:1px solid rgba(255,255,255,.2)}
+    .orbit{position:absolute;width:300px;height:95px;border:1px solid rgba(98,230,224,.5);border-radius:50%;transform:rotate(-28deg)}
+    section{padding:72px 0}.section-label{color:var(--cyan);font-size:.8rem;text-transform:uppercase;letter-spacing:.18em;font-weight:800}.section-title{font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.04em;margin:8px 0 16px}.section-copy{color:var(--muted);max-width:700px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .card{padding:24px;border:1px solid var(--line);background:rgba(16,24,43,.76);border-radius:20px;min-height:175px}
+    .card .symbol{font-size:1.55rem;margin-bottom:13px}.card h3{margin-bottom:8px;font-size:1.12rem}.card p{color:var(--muted);font-size:.95rem}
+    .skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.skill{padding:9px 13px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.035);color:#dbe5fa;font-size:.9rem}
+    .contact{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(110deg,rgba(115,167,255,.12),rgba(98,230,224,.07));margin-top:26px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:58px;gap:34px;min-height:auto}.profile-card{min-height:270px}.grid{grid-template-columns:1fr}.navlinks{gap:12px;font-size:.82rem}nav{align-items:flex-start;padding:16px 0;flex-direction:column}.contact{align-items:flex-start;flex-direction:column}section{padding:56px 0}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">RAHUL<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> PERSONAL PORTFOLIO</div>
+        <h1>Hello, I'm<br><span>Rahul.</span></h1>
+        <p class="intro">Welcome to my personal space on the internet. I'm building my skills, exploring creative ideas, and turning them into projects. This portfolio is where my journey begins.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore My Work ↗</a><a class="btn secondary" href="#contact">Get in Touch</a></div>
+      </div>
+      <div class="profile-card" aria-label="Rahul initials artwork"><div class="orbit"></div><div class="orb">R</div></div>
+    </section>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-label">01 / About</div><h2 class="section-title">A little about me.</h2>
+        <p class="section-copy">I'm Rahul. I enjoy learning new things, experimenting with digital ideas, and creating a professional online presence. I'll keep updating this website as I learn and complete new projects.</p>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-label">02 / Skills</div><h2 class="section-title">Things I'm exploring.</h2>
+        <p class="section-copy">These are starter topics for this portfolio. Update them to match your real skills and interests.</p>
+        <div class="skills"><span class="skill">Creative Ideas</span><span class="skill">Gaming</span><span class="skill">Digital Content</span><span class="skill">Web Design</span><span class="skill">Learning & Building</span></div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-label">03 / Projects</div><h2 class="section-title">Selected work.</h2>
+        <p class="section-copy">Your projects will appear here. Replace these examples with your own work whenever you're ready.</p>
+        <div class="grid">
+          <article class="card"><div class="symbol">✦</div><h3>Personal Portfolio</h3><p>A home on the web to introduce myself and share what I'm working on.</p></article>
+          <article class="card"><div class="symbol">◈</div><h3>Creative Content</h3><p>A place to feature videos, designs, and other creative experiments.</p></article>
+          <article class="card"><div class="symbol">⌘</div><h3>Next Project</h3><p>Something new is on the way. I'll add the details here when it's ready.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-label">04 / Contact</div><h2 class="section-title">Let's connect.</h2>
+        <div class="contact"><div><h3>Have an idea or want to collaborate?</h3><p class="section-copy">Add your preferred public contact link here when you're ready.</p></div><a class="btn primary" href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year">2026</span> Rahul. Built with care.</div></footer>
+</body>
+</html>
